@@ -138,3 +138,76 @@ Recusrsos:
 
 - Pruebo -> Ok. En la consola aprece los cinco objetos recogidos de la API
 
+
+
+------------------------------------------------------------------------------------------------------------------------
+Versión: v0.3
+	- Crear clase de modelo para encapsular una photos
+	- Crear un formulario para el modelo
+	
+	
+Recusrsos:
+	card: https://material.angular.io/components/card/overview
+	toolbar: https://material.angular.io/components/toolbar/overview
+	material- input: https://material.angular.io/components/input/overview
+------------------------------------------------------------------------------------------------------------------------
+
+- Creo la interfaz de modelo Photo: ng generate i /models/Photo
+	CREATE src/app/models/photo.ts (27 bytes)
+
+- En app.component.ts 
+	- importo la interfaz
+	Creo un array de Photos dnode recogeré los datos recibidos de la API
+- Modifico el servicio para que el método getPhotos() devuelva un array del tipo Photo. Además tengo que importar la interfaz (VS Code importa automáticamente)
+
+- Modifico app.component.html para ir utilizando componentes de Material e ir pintando el resultado.
+	- elimino el Button (Sólo era de ejemplo)
+	- Creo una estructura <main></main> de HTML
+	- Añado un componente <mat-card>: is a content container for text, photos, and actions in the context of a single subject.  https://material.angular.io/components/card/overview
+		- En https://material.angular.io/components/card/api explica como importarlo: import {MatCardModule} from '@angular/material/card';
+		- Añado la referencia en material.component.ts
+	- Añado en app.component.html el tag   <mat-card>test</mat-card>. Pruebo la pantall y aparece la tarjeta arrib, ocupando todo el ancho. -> Formatear visualizacion
+	- En app.component.css añado un estilo para main y otro para mat-card:
+			main {
+				width: 100%;
+				margin-top: 2rem;
+				text-align: center;
+			}
+
+			mat-card {
+				margin: auto;
+				width: 35%;
+				display: block;
+				margin-top: 2rem;
+			}
+	- Añadimos otro componente: <mat-toolbar> is a container for headers, titles, or actions.
+		<mat-toolbar color="primary">
+		  <span>My Application</span>
+		</mat-toolbar>
+
+	- En app.component.html, agrego un formulario dentro de la tarjeta:
+		<form action="">
+			<input type="text" placeholder="title" />
+		  </form>
+		- Pruebo -> Ok La caja de texto aparece sin estilos. Para ver que estilos puedo aplicar voy a material- input: https://material.angular.io/components/input/overview
+			-> Tengo que importar el módulo: MatInputModule y MatFormField. Voy a la página de examples y veo como se utiliza:
+				  <mat-form-field class="example-full-width">
+					<input matInput placeholder="Favorite food" value="Sushi">
+				  </mat-form-field>
+		
+		- Pruebo -> Ok
+		
+	- Agrego otro campo de tipo select: <mat-select> is a form control for selecting a value from a set of options, similar to the native <select>
+		- Para tener los valores del select creo en app.component.ts una lista albumId = [1,2,3]
+	- Agreog otro input para URL
+	- Agrego un botón
+	- Modifico la ubicación de la imagen para ponerla en el formulario y con un tamaño menor
+	
+	-> Pruebo -> Ok
+		
+		
+		
+		
+		
+		
+
