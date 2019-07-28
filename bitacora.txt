@@ -80,3 +80,22 @@ Recusrsos:
 		mat-icon-button 	Circular button with a transparent background, meant to contain an icon
 		mat-fab 	Circular button w/ elevation, defaults to theme's accent color
 		mat-mini-fab 	Same as mat-fab but smaller
+		
+- Para facilitar la importación y la visibilidad de módulos de Material, creo el material.module.ts:
+			import { NgModule } from '@angular/core';
+			import {
+				MatButtonModule 
+			} from '@angular/material';
+			@NgModule({
+				imports: [
+					MatButtonModule
+				],
+				exports: [
+					MatButtonModule
+				]
+			})
+			export class MaterialModule { }
+- Una vez declarado, modifico app.module.ts para que referencie a material.module.ts
+	- Elimino la importación de material: import { MatButtonModule } from '@angular/material';
+	- Importo la clase MaterilaModule.
+- Pruebo -> Ok
