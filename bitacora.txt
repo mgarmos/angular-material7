@@ -8,6 +8,13 @@ OBJETIVO:
 
 --------------------
 Versión: v0.0
+	- Crear proyecto
+	- Instalar y configurar Material
+	- Abrir en VS Code
+	- Crear repositorio
+--------------------
+
+
 - Crear el proyecto: 
 	- ng new angular-material7  -> OK 
 	- npm start (Si falla la descarga o estoy recuperando una versión del git, para que  haga un build del proyecto)
@@ -38,3 +45,12 @@ Versión: v0.0
 			BrowserAnimationsModule
 		
 - Abro el proyecto con VS Code arrastrando al a carpeta del proyecto al editor.
+
+- Creo el repositorio en local: git init
+- Añado todos los componentes: git add *.*
+- Hago commit: git commit -m "Initial version"
+- Enlazo con repositorio remoto (Creado previamente con el mimo nombre)
+	git remote add origin https://github.com/mgarmos/angular-material7.git
+	git push -u origin master
+- Creo la etiqueta de la versión V0.0: git tag -a v0.0 -m "my version 0.0"
+- Subo al repositorio la etiqueta: git push origin v0.0
