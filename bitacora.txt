@@ -102,7 +102,7 @@ Recusrsos:
 
 ----------------------------------------
 Versión: v0.2
-	- Crear un servicio que recoja datos de un API
+	- Crear un servicio que recoja datos de un API y los muestre por consola
 	
 Recusrsos:
 	API: https://jsonplaceholder.typicode.com/photos
@@ -137,3 +137,4 @@ Recusrsos:
 - En app.module.ts importo el módulo httpClientModule
 
 - Pruebo -> Ok. En la consola aprece los cinco objetos recogidos de la API
+
