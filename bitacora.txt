@@ -207,7 +207,25 @@ Recusrsos:
 		
 		
 		
+------------------------------------------------------------------------------------------------------------------------
+Versión: v0.
+	- Crear un componente para visualizar las photos
+	- 
+	
+	
+Recusrsos:
+	card: https://material.angular.io/components/card/overview
+	toolbar: https://material.angular.io/components/toolbar/overview
+	material- input: https://material.angular.io/components/input/overview
+------------------------------------------------------------------------------------------------------------------------		
 		
+- Creo el componente photos:
+	ng g c components/photos --module app	(La directiva --module es para que no se produzca el error: More than one module matches. Use skip-import option to skip importing the component into the closest module)
+	
+- Compruebo que funciona colocando app-photos dentro del main de app.component.html -> OK
+- En photos.component.ts:
+	- Importo el servicio 
+	........
 		
 		
 

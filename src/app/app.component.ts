@@ -12,21 +12,15 @@ import {Photo} from './models/photo'
 
 
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  photos: Photo[] = [];
+  
   albumsId: number[] = [ 1, 2, 3];
 
 
   constructor( public photoService: PhotosService) {}
 
 
-  ngOnInit(): void {
-    this.photoService.getPhotos()
-      .subscribe(
-        photos => console.log(photos),
-        err => console.log(err)
-      );
-  }
+
 
 }
