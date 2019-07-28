@@ -93,9 +93,47 @@ Recusrsos:
 				exports: [
 					MatButtonModule
 				]
-			})
+			})  
 			export class MaterialModule { }
 - Una vez declarado, modifico app.module.ts para que referencie a material.module.ts
 	- Elimino la importación de material: import { MatButtonModule } from '@angular/material';
 	- Importo la clase MaterilaModule.
 - Pruebo -> Ok
+
+----------------------------------------
+Versión: v0.2
+	- Crear un servicio que recoja datos de un API
+	
+Recusrsos:
+	API: https://jsonplaceholder.typicode.com/photos
+----------------------------------------
+
+- Creo un servicio que se llame photos en la carpeta services: ng g s services/photos 
+	- Crea el servicio y la clase de pueba del servicio :
+		CREATE src/app/services/photos.service.spec.ts (333 bytes)
+		CREATE src/app/services/photos.service.ts (135 bytes)
+	Notas
+		- Un servicio es una clase que podemos reutilizar, para no tener que repetir código
+		- El servicio tiene un decoradod llamado @Injectable({ providedIn: 'root' }) que dice que la clase es visible desde root, es decir, para toda la aplicación. Es
+			como si se hubiera importado en app.module.ts
+		- El servicio llamará a una API y recogera los valores porporcionado. Para ello utilizaremos el modulo HttpClient del módulo @Angular/common/http
+		
+		
+- En el servicio:
+	- importo la clase HttpClient:
+	- Añado la clase en el import
+	- Se la paseo al constructor para que pueda utilizarla
+	- Creo el método getPhotos() que llame al API y devuelva cinco registros: return this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=5');
+	
+- En app.component.ts (Importo el servicio y configuro para que recoja la información nada más cargar
+	- Importo el servicio
+	- Importo el módulo httpClientModule que lo utilizará el servicio
+	- Creo el constructor y le paso como parámetro el servicio.
+	- Implemento onInit y creo el método ngOnInit()
+	
+	- En el método ngOnInit(): void :
+		- Llamo al servicio y recojo los datos a través de suscribe, que devuelve, si todo ha ido bien, los datos, y si no, un error. Todo ello lo envío a consola
+	
+- En app.module.ts importo el módulo httpClientModule
+
+- Pruebo -> Ok. En la consola aprece los cinco objetos recogidos de la API
