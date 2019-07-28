@@ -1,0 +1,40 @@
+------------------------------------------------------------------------
+OBJETIVO:
+	Aprender a desarrollar una aplcación con angular Material
+	
+	Recursos:
+	Angular Material 7 Tutorial: https://www.youtube.com/watch?v=n5kTqHmLtN8
+------------------------------------------------------------------------
+
+--------------------
+Versión: v0.0
+- Crear el proyecto: 
+	- ng new angular-material7  -> OK 
+	- npm start (Si falla la descarga o estoy recuperando una versión del git, para que  haga un build del proyecto)
+	
+- Abro pagina de material: https://material.angular.io/guide/getting-started
+- Importo Material:
+	- ng add @angular/material ->Ok. 
+	Si edito package.json apareece la referencia a:
+		"@angular/material": "^8.1.1"
+		"@angular/cdk": "~8.1.1",
+		"hammerjs": "^2.0.8",
+	En angular.json, ha añadido el estilo de material:
+		"styles": [
+				  "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",	
+	
+	En src/styles.css ha añadido una fuente:
+		body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+		
+	En src/index.html ha añadido dos referencias:
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+	En main.ts ha añadido: import 'hammerjs';
+	
+	Y por último, an app.module.ts ha agregado dos módulos:
+		  imports: [
+			BrowserModule,
+			BrowserAnimationsModule
+		
+- Abro el proyecto con VS Code arrastrando al a carpeta del proyecto al editor.
