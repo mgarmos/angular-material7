@@ -6,13 +6,13 @@ OBJETIVO:
 	Angular Material 7 Tutorial: https://www.youtube.com/watch?v=n5kTqHmLtN8
 ------------------------------------------------------------------------
 
---------------------
+----------------------------------------
 Versión: v0.0
 	- Crear proyecto
 	- Instalar y configurar Material
 	- Abrir en VS Code
 	- Crear repositorio
---------------------
+----------------------------------------
 
 
 - Crear el proyecto: 
@@ -54,3 +54,29 @@ Versión: v0.0
 	git push -u origin master
 - Creo la etiqueta de la versión V0.0: git tag -a v0.0 -m "my version 0.0"
 - Subo al repositorio la etiqueta: git push origin v0.0
+
+
+
+----------------------------------------
+Versión: v0.1
+	- Crear un botón con Material
+	
+Recusrsos:
+	Button - Angular Material: https://material.angular.io/components/button/overview
+----------------------------------------
+
+- Importo el módulo en app.module.ts:
+	import { MatButtonModule } from '@angular/material';
+	Añado en imports: MatButtonModule
+	
+- Limpio app.component.html: Dejo únicamente la imagen de ángular
+- Creo un botón con uno de los estilos de Material: <button mat-button>ClickMe!</button>
+
+		Attribute 	Description
+		mat-button 	Rectangular text button w/ no elevation
+		mat-raised-button 	Rectangular contained button w/ elevation
+		mat-flat-button 	Rectangular contained button w/ no elevation
+		mat-stroked-button 	Rectangular outlined button w/ no elevation
+		mat-icon-button 	Circular button with a transparent background, meant to contain an icon
+		mat-fab 	Circular button w/ elevation, defaults to theme's accent color
+		mat-mini-fab 	Same as mat-fab but smaller
