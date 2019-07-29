@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { PhotosService } from './services/photos.service';
 
-import {Photo} from './models/photo'
+import {Photo} from './models/photo';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,6 @@ import {Photo} from './models/photo'
 
 export class AppComponent {
 
-  
   albumsId: number[] = [ 1, 2, 3];
 
 

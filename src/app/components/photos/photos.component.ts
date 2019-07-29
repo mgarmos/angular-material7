@@ -16,7 +16,7 @@ export class PhotosComponent implements OnInit {
   ngOnInit(): void {
     this.photoService.getPhotos()
       .subscribe(photos => {console.log(photos); this.photos =  photos; }, 
-      err => alert('Error al intentar cargar los datos\nCrear pantalla modal'));
+      err => alert('Error al intentar cargar los datos\nCrear pantalla modal: ' + err));
   }
 
   click() {

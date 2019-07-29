@@ -208,12 +208,12 @@ Recusrsos:
 		
 		
 ------------------------------------------------------------------------------------------------------------------------
-Versión: v0.
-	- Crear un componente para visualizar las photos
-	- 
+Versión: v0.4
+	- Crear un componente para visualizar la lista de photos
+
 	
 	
-Recusrsos:
+Recursos:
 	card: https://material.angular.io/components/card/overview
 	toolbar: https://material.angular.io/components/toolbar/overview
 	material- input: https://material.angular.io/components/input/overview
@@ -225,7 +225,10 @@ Recusrsos:
 - Compruebo que funciona colocando app-photos dentro del main de app.component.html -> OK
 - En photos.component.ts:
 	- Importo el servicio 
-	........
+	- importo el modelo Photo
+	
+- En app.component.html:
+	- He añadido el componente al final: <app-photos></app-photos>
 		
 		
 
