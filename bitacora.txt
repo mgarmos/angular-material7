@@ -231,4 +231,43 @@ Recursos:
 	- He añadido el componente al final: <app-photos></app-photos>
 		
 		
+------------------------------------------------------------------------------------------------------------------------
+Versión: v0.5
+	- Añadir una pantalla emergente que permita modificar valores de la photo seleccionada
+
+	
+	
+Recursos:
+	MatDialogModule: https://material.angular.io/components/dialog/overview
+	youtub: https://www.youtube.com/watch?v=lrVpUVydZwM
+------------------------------------------------------------------------------------------------------------------------
+
+- El objetivo es abrir un cuadro modal que permita cambiar el título de la foto. Puesto que el API no permite modificaciones, habrá que simular la actualización.
+
+
+- Creo el componente que va a abrirse como ventana modal: PhotoDialog
+	ng g c components/photoDialog --module app
+	
+		CREATE src/app/components/photo-dialog/photo-dialog.component.html (27 bytes)
+		CREATE src/app/components/photo-dialog/photo-dialog.component.spec.ts (664 bytes)
+		CREATE src/app/components/photo-dialog/photo-dialog.component.ts (292 bytes)
+		CREATE src/app/components/photo-dialog/photo-dialog.component.css (0 bytes)
+		UPDATE src/app/app.module.ts (785 bytes)
+	
+- Pruebo que funciona añadiendolo en app... arriba del todo-> <app-photo-dialog></app-photo-dialog> -> Ok
+- Creo un formulario con un sólo campo y un botón -> Ok
+
+- Implemento el ts
+	- Añado la variable title: string;
+	
+	
+	
+	
+	
+
+- En material.module.ts -> Importo import {MatDialogModule} from '@angular/material/dialog'; 
+- Modifico el comportamiento del botón de photo.component.html redefiniendo el metodo click por openDialog()
+
+
+
 

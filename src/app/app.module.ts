@@ -7,13 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
 import { PhotosComponent } from './components/photos/photos.component';
+import { PhotoDialogComponent } from './components/photo-dialog/photo-dialog.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotosComponent
+    PhotosComponent,
+    PhotoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { PhotosComponent } from './components/photos/photos.component';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PhotoDialogComponent]
 })
 export class AppModule { }

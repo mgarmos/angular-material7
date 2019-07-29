@@ -19,7 +19,7 @@ export class PhotosComponent implements OnInit {
       err => alert('Error al intentar cargar los datos\nCrear pantalla modal: ' + err));
   }
 
-  click() {
+  openDialog() {
     alert('Implementar pantalla modal');
   }
 
